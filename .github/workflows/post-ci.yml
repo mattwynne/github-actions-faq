@@ -6,4 +6,5 @@ jobs:
   see-what-happened:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ toJson(github.event) }}
+      - name: print event data
+        run: echo ${{ toJson(github.event) }}
