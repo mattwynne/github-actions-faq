@@ -1,6 +1,6 @@
 on: 
   workflow_run:
-    workflows: ["Run Tests"]
+    workflows: ["CI"]
 
 jobs:
   see-what-happened:
