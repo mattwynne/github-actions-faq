@@ -6,7 +6,7 @@ https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-ex
 
 https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/webhook-events-and-payloads#push
 
-## What can you see in a `workflow_run` event?
+## What can you see in a `workflow_run` event?
 
 You can see it here:
 
@@ -16,3 +16,5 @@ You can see it here:
 ## Can you find out the result of the workflow in a workflow_run event?
 
 Yes, use `github.event.workflow_run.conclusion`
+
+e.g. https://github.com/mattwynne/github-workflows-playground/blob/52693bf0cc52c7decd70c58c8e49703915998f89/.github/workflows/post-ci.yml#L10
