@@ -16,3 +16,6 @@ jobs:
 
       - name: print commit message
         run: echo ${{ github.event.commits[0].message }}
+
+      - name: conditionally fail
+        run: exit ${{ (contains(github.event.head_commit.message, '[fail]') && '1') || '0' }}
