@@ -13,3 +13,6 @@ jobs:
 
       - name: Run a one-line script
         run: echo Hello, world!
+
+      - name: print commit message
+        run: echo ${{ event.commits[0].message }}
