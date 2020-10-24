@@ -15,4 +15,4 @@ jobs:
         run: echo Hello, world!
 
       - name: print commit message
-        run: echo ${{ event.commits[0].message }}
+        run: echo ${{ github.event.commits[0].message }}
