@@ -10,11 +10,11 @@ https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/w
 
 You can see it here:
 
-- https://github.com/mattwynne/github-workflows-playground/actions/runs/326443410
-- https://github.com/mattwynne/github-workflows-playground/actions/runs/326443276
+- https://github.com/mattwynne/github-actions-faq/actions/runs/326443410
+- https://github.com/mattwynne/github-actions-faq/actions/runs/326443276
 
 ## Can you find out the result of the workflow in a workflow_run event?
 
 Yes, use `github.event.workflow_run.conclusion`
 
-e.g. https://github.com/mattwynne/github-workflows-playground/blob/52693bf0cc52c7decd70c58c8e49703915998f89/.github/workflows/post-ci.yml#L10
+e.g. https://github.com/mattwynne/github-actions-faq/blob/52693bf0cc52c7decd70c58c8e49703915998f89/.github/workflows/post-ci.yml#L10
