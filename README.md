@@ -20,3 +20,18 @@ Yes, use `github.event.workflow_run.conclusion`
 e.g. https://github.com/mattwynne/github-actions-faq/blob/52693bf0cc52c7decd70c58c8e49703915998f89/.github/workflows/post-ci.yml#L10
 
 ## Does a job run even if ealier jobs failed?
+
+[Yes](https://github.com/mattwynne/github-actions-faq/runs/1308812856?check_suite_focus=true)
+
+## How do I only run a job if ealier jobs failed?
+
+Use the [`needs` context](https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions#needs-context):
+
+```yaml
+jobs:
+  build: ...
+  after-build:
+    runs-on: ubuntu-latest
+    needs: build
+    if: needs.build.result == 'success'
+```

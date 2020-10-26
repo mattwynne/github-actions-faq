@@ -22,6 +22,8 @@ jobs:
 
   after-build:
     runs-on: ubuntu-latest
+    needs: build
+    if: needs.build.result == 'success'
 
     steps:
       - run: echo "Yes"
