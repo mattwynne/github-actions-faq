@@ -38,6 +38,8 @@ jobs:
 
 ## Can you use a multi-line `if` conditional?
 
+[Yes](https://github.com/mattwynne/github-actions-faq/runs/1308871210?check_suite_focus=true)
+
 e.g.
 
 ```yaml
