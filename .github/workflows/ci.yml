@@ -19,3 +19,9 @@ jobs:
 
       - name: conditionally fail
         run: exit ${{ (contains(github.event.head_commit.message, '[fail]') && '1') || '0' }}
+
+  after-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Yes"

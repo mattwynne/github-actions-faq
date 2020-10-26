@@ -18,3 +18,5 @@ You can see it here:
 Yes, use `github.event.workflow_run.conclusion`
 
 e.g. https://github.com/mattwynne/github-actions-faq/blob/52693bf0cc52c7decd70c58c8e49703915998f89/.github/workflows/post-ci.yml#L10
+
+## Does a job run even if ealier jobs failed?
