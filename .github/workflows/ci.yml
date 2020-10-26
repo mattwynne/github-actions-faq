@@ -23,7 +23,9 @@ jobs:
   after-build:
     runs-on: ubuntu-latest
     needs: build
-    if: needs.build.result == 'success'
+    if: |
+      needs.build.result == 'success'
+      && contains('test', 't')
 
     steps:
       - run: echo "Yes"

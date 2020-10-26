@@ -35,3 +35,18 @@ jobs:
     needs: build
     if: needs.build.result == 'success'
 ```
+
+## Can you use a multi-line `if` conditional?
+
+e.g.
+
+```yaml
+publish-image:
+  name: Build & publish Docker image to smartbear/gherkin-editor:<git-sha>
+  runs-on: ubuntu-latest
+  needs: [test-app, test-server, test-git]
+  if: |
+    (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v') 
+    && github.event_name == 'push' 
+    && !contains(github.event.head_commit.message, '[ci skip]')
+```
