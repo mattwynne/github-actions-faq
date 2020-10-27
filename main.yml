@@ -1,0 +1,13 @@
+name: After build
+
+on:
+  check_run:
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo ${{ github.event }}
